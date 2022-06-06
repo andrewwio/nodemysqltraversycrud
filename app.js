@@ -6,7 +6,7 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'password',
-  database: 'nodemysqltraversyminimal'
+  database: 'nodemysqltraversycrud'
 });
 
 // Connect
@@ -21,7 +21,7 @@ const app = express();
 
 // Create database
 app.get('/createdatabase', (req, res) => {
-  let sql = 'CREATE DATABASE nodemysqltraversyminimal';
+  let sql = 'CREATE DATABASE nodemysqltraversycrud';
   db.query(sql, (err, result) => {
     if(err) throw err;
     console.log(result);
